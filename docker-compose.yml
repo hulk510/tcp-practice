@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  ubuntu:
+    build: .
+    volumes:
+      - ./netns:/var/run/netns
+    container_name: tcp_test
+    privileged: true
+    tty: true
